@@ -1,0 +1,21 @@
+@import '../../style/const.scss';
+@import '../../style/mixin.scss';
+
+.header{
+    @include flex;
+    justify-content: space-between;
+    border: 2px solid $color__header-border;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 5px;
+    &__content-left{
+        @include flex;
+        margin-right: 15px;
+    }
+    &__content-left-result{
+        margin-right: 15px;
+    }
+    &___content-title{
+        font-weight: bold;
+    }
+}

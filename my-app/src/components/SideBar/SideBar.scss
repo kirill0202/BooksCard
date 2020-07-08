@@ -1,0 +1,26 @@
+.sidebar {
+    border: 1px solid #ddd;
+    max-height: 300px;
+    min-width: 250px;
+    &__item {
+        padding: 10px;
+        border-bottom: 1px solid #ddd;
+        cursor: pointer;
+        font-weight: bold;
+        &:hover {
+            background-color: #ddd;
+        }
+    }
+    &__search {
+        padding: 10px;
+        border: 1px solid #ddd;
+        width: 200px;
+    }
+    &__input{
+       min-height: 30%; 
+       display: flex;
+       justify-content: center; 
+       align-items: center;   
+    }
+}
+
