@@ -1,30 +1,33 @@
-@import '../../../style/const.scss';
+@import "../../../style/const.scss";
 
 .card {
-    margin:0 25px 15px;
+    margin: 0 25px 15px;
     cursor: pointer;
     &__wrapper {
         max-width: 250px;
         height: auto;
         margin: 0 auto;
         border-radius: 15px;
-        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     }
     &__content-image {
         border-radius: 15px 15px 0 0;
         min-width: 250px;
         max-height: 300px;
-        border-bottom: 1px solid $color__border_card;
+        border-bottom: 1px solid $color__default;
     }
 }
-.footer__card{
+.footer__card {
     word-break: break-all;
     padding: 10px;
-    &-title{
+    &-title {
         font-weight: bold;
         padding-bottom: 10px;
     }
-    &-price{
-        padding-top: 5px;
+    &-author {
+        padding-bottom: 10px;
+    }
+    &-price {
+        border-top: 1px solid $color__default;
     }
 }

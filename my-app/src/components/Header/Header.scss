@@ -4,7 +4,7 @@
 .header{
     @include flex;
     justify-content: space-between;
-    border: 2px solid $color__header-border;
+    border: 2px solid $color__default;
     padding: 10px;
     border-radius: 10px;
     margin: 5px;

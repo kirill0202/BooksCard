@@ -9,7 +9,7 @@ import './BookList.scss';
 
 
 
-const BooksList = ({booksData}) => {
+const BooksList = ({ booksData }) => {
     const [books, setBooks] = useState([]);
 
     const dispatch = useDispatch();
@@ -31,14 +31,11 @@ const BooksList = ({booksData}) => {
     })
     return (
         <>
-            {!booksData.length ?
-                <div className="loading">
-                    <Loading />
-                </div>
+            {!booksData.length ? <Loading />
                 : <ul className="books__list-items">
                     {elementsBooks}
                 </ul>}
         </>
     )
 }
-export default React.memo(BooksList);
+export default BooksList;
