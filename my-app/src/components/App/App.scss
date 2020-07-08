@@ -1,0 +1,16 @@
+@import '../../style/mixin.scss';
+
+p,h5,li, ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.container{
+    width: 1200px;
+    margin: 0 auto;
+}
+.components{
+    @include flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
