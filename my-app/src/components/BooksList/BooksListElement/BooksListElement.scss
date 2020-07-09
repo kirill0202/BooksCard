@@ -15,6 +15,14 @@
         min-width: 250px;
         max-height: 300px;
         border-bottom: 1px solid $color__default;
+        -moz-transition: all 1s ease-out;
+        -o-transition: all 1s ease-out;
+        -webkit-transition: all 1s ease-out;
+        &:hover {
+            -webkit-transform: scale(1.1);
+            -moz-transform: scale(1.1);
+            -o-transform: scale(1.1);
+        }
     }
 }
 .footer__card {
@@ -30,11 +38,11 @@
     &-price {
         border-top: 1px solid $color__default;
     }
-    &-ruble{
+    &-ruble {
         padding-right: 10px;
         font-size: 15px;
     }
-    &-button{
+    &-button {
         margin-bottom: 5px;
         padding: 7px;
         width: 100%;
@@ -42,8 +50,8 @@
         background-color: $color__booksCard_button;
         border: none;
         cursor: pointer;
-        &:hover{
-         background-color: $hover__bookcCard_button;
+        &:hover {
+            background-color: $hover__bookcCard_button;
         }
     }
 }

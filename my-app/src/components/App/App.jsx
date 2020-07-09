@@ -1,14 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.scss';
 import Menu from '../Header/Header';
-
 import SideBar from '../SideBar/SideBar';
 import BookListContainer from '../../containers/BooksListContainers/BookListContainer';
-
-
-
-
-
 
 const App = () => {
   return (
@@ -18,8 +12,7 @@ const App = () => {
         <BookListContainer />
         <SideBar />
       </div>
-
     </div>
   );
 }
-export default App;
+export default React.memo(App);

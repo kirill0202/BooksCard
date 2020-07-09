@@ -20,10 +20,6 @@ const SideBar = () => {
         const name = 'cheap';
         dispatch(actionFilterBooks(name))
     }
-    const popularHeadleSort = () => {
-        const name = 'popular';
-        dispatch(actionFilterBooks(name))
-    }
     const authorHandleSort = () => {
         const name = 'author';
         dispatch(actionFilterBooks(name))
@@ -37,15 +33,12 @@ const SideBar = () => {
         const search = url.searchParams.set("search", `${event.target.value}`);
         history.replace(url.search.replace(search))
     }
-
+   
     return (
         <div className="sidebar">
             <ul className="sidebar__items">
                 <li className="sidebar__item" name="all" onClick ={allHandleSort}>
                     Все
-                </li>
-                <li className="sidebar__item" onClick={popularHeadleSort}>
-                    Популярные
                 </li>
                 <li className="sidebar__item" onClick={expensiveHandleSort}>
                     Цена(дорогие)
