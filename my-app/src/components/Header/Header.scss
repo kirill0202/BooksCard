@@ -12,6 +12,10 @@
         @include flex;
         margin-right: 15px;
     }
+    &__content-price,
+    &__content-card{
+        font-weight: bold;
+    }
     &__content-left-result{
         margin-right: 15px;
     }

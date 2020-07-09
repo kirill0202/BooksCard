@@ -10,10 +10,10 @@ const Header = () => {
                <p className="header___content-title">Lists Books</p>
             </div>
             <div className="header__content-left">
-                <p className="header__content-left-result">Итого: <span>0 руб.</span></p>
-                <p className="header__content-left-cart">Корзина</p>
+                <p className="header__content-left-result">Итого: <span className="header__content-price">0 руб.</span></p>
+                <p className="header__content-left-cart">Корзина:  <span className="header__content-card">(0)</span></p>
             </div>
         </header>
     )
 }
-export default Header;
+export default React.memo(Header);

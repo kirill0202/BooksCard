@@ -1,7 +1,6 @@
-import  { SET_BOOKS, SET_ISLOADING }  from "../type/type";
+import  { SET_BOOKS, BOOK_SORT_CARD,  }  from "../type/type";
 
 const initialState = {
-    isLoading: false,
     books: []
 }
 
@@ -9,8 +8,9 @@ const reducerBooks = (state = initialState, action) => {
     switch (action.type) {
         case SET_BOOKS:
             return {...state,  books: action.payload, isLoading: true };
-        case SET_ISLOADING:
-            return [...state, {isLoading: action.payload}]
+       case BOOK_SORT_CARD:
+            console.log(action.payload)
+           return {...state}
         default:
             return state
     }

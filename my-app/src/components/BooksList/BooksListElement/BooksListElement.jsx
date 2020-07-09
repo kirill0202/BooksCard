@@ -1,5 +1,6 @@
 import React from 'react';
 import './BooksListElement.scss';
+import Button from '../../Button/Button';
 
 
 const BooksListElements = ({ title, image, price, author }) => {
@@ -13,11 +14,12 @@ const BooksListElements = ({ title, image, price, author }) => {
                     <div className="footer__card">
                         <p className="footer__card-title">{title}</p>
                         <p className="footer__card-author">{author}</p>
-                        <p className="footer__card-price">{price}</p>
+                        <Button title={'добавить в корзину'} classnamestyle={'footer__card-button'}/>
+                        <p className="footer__card-price"><i className="fas fa-ruble-sign footer__card-ruble"></i>{price}</p>
                     </div>
                 </div>
             </div>
         </div>
     )
 }
-export default BooksListElements;
+export default React.memo(BooksListElements);

@@ -2,7 +2,8 @@
 
 .sidebar {
     border: 1px solid $color__default;
-    max-height: 350px;
+    align-self: flex-start;
+    min-height: auto;
     min-width: 250px;
     &__item {
         padding: 10px;
@@ -19,7 +20,9 @@
         width: 200px;
     }
     &__input {
-        text-align: center;
-        margin-top: 10px;
+        margin: 15px;
+        display: flex;
+        justify-content: center;
+        align-content: center;
     }
 }

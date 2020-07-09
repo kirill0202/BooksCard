@@ -30,4 +30,20 @@
     &-price {
         border-top: 1px solid $color__default;
     }
+    &-ruble{
+        padding-right: 10px;
+        font-size: 15px;
+    }
+    &-button{
+        margin-bottom: 5px;
+        padding: 7px;
+        width: 100%;
+        color: $color__default-white;
+        background-color: $color__booksCard_button;
+        border: none;
+        cursor: pointer;
+        &:hover{
+         background-color: $hover__bookcCard_button;
+        }
+    }
 }

@@ -4,9 +4,9 @@ import './Loading.scss';
 const Loading = () => {
     return (
         <div className="wrapper">
-            <div class="loader">
-                <div class="loader__title">Loading</div>
-                <div class="loader__dots">
+            <div className="loader">
+                <div className="loader__title">Loading</div>
+                <div className="loader__dots">
                     <div className="loader__dots-item"></div>
                     <div className="loader__dots-item"></div>
                     <div className="loader__dots-item"></div>
@@ -14,8 +14,6 @@ const Loading = () => {
                 </div>
             </div>
         </div>
-
     )
 }
-
 export default React.memo(Loading);

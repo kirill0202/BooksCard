@@ -3,7 +3,7 @@ import axios from 'axios';
 import { actionSetBook } from '../../store/actions/actionBooks/actionSetBook';
 import { useSelector, useDispatch } from 'react-redux';
 import BooksListElements from './BooksListElement/BooksListElement';
-import Loading from '../Loading/Loadng';
+import Loading from '../Loading/Loading';
 import './BookList.scss';
 
 
@@ -38,4 +38,4 @@ const BooksList = ({ booksData }) => {
         </>
     )
 }
-export default BooksList;
+export default React.memo(BooksList);

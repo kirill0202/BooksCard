@@ -11,4 +11,4 @@ const Input = ({placeholder, classnamestyle, input, value , onChange}) => {
          className={classnamestyle}/>
     )
 }
-export default Input;
+export default React.memo(Input);
