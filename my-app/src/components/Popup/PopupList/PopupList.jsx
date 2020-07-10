@@ -4,7 +4,7 @@ import Button from '../../Button/Button'
 import { useDispatch } from 'react-redux';
 import { actionRemoveCart } from '../../../store/actions/actionCart/actionRemoveCart';
 
-const PopupList = ({ title, id }) => {
+const PopupList = ({ title, id , image }) => {
     const dispatch = useDispatch();
     const handleRemoveBookCart = () => {
         const cartId = id
@@ -15,6 +15,7 @@ const PopupList = ({ title, id }) => {
             <div className="popup__wrapper">
                 <div className="popup__content">
                     <div className="popup__content-item">
+                    <img src={image} className="popup__content-image"/>
                         <p className="popup__content-title">
                             {title}
                         </p>

@@ -6,6 +6,10 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        &-item{
+            display: flex;
+            align-items: center;
+        }
         &-button{
             cursor: pointer;
             border: none;
@@ -13,8 +17,13 @@
             color: $color__default-white;
             background-color: $color__button-cart-remove;
         }
-        &-titile{
+        &-title{
             word-break: break-all;
+            padding-left: 10px;
+        }
+        &-image{
+            max-width: 50px;
+            max-height: 50px;
         }
     }
 }

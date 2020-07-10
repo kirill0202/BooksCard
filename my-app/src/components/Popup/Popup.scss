@@ -4,14 +4,25 @@
     position: absolute;
     right: 7px;
     top: 50px;
-    border: 1px solid $color__border_cart;
     height: auto;
     width: 350px;
     background-color: $color__default-white;
+}
+.popup__item{
+    border: 1px solid $color__border_cart;
+    cursor: pointer;
+    &:hover{
+        background-color: $color__border_cart;
+    }
 }
 .popup__notifications{
     text-align: center;
     padding: 10px;
     font-weight: bold;
     font-size: 15px;
+    border: 1px solid $color__border_cart;
+    cursor: pointer;
+    &:hover{
+        background-color: $color__border_cart;
+    }
 }

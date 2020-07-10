@@ -9,7 +9,7 @@ const Popup = ({ totalPrice }) => {
     const uniqByTotolalPrice = uniqBy(totalPrice, book => book.id)
     const cartElements = uniqByTotolalPrice.map((book) => {
         return (
-            <li key={book.id}>
+            <li key={book.id} className="popup__item">
                 <PopupList {...book} />
             </li>)
     })

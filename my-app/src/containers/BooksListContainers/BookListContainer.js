@@ -2,7 +2,7 @@ import React from 'react';
 import BookList from '../../components/BooksList/BooksList';
 import { useSelector } from 'react-redux';
 import { useLocation } from 'react-router';
-import orderBy from 'lodash/orderBy';
+
 
 
 const BookListContainer = () => {
@@ -12,7 +12,6 @@ const BookListContainer = () => {
     const getSearchValue = searchParams.get('search')
     const currentNote = getSearchValue ? booksData.filter((item) => item.title.toUpperCase().includes(getSearchValue.toUpperCase())
         || item.author.toUpperCase().includes(getSearchValue.toUpperCase())) : booksData;
- 
     return <BookList booksData={currentNote} />
 }
 export default React.memo(BookListContainer);

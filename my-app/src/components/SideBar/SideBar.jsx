@@ -11,7 +11,7 @@ const SideBar = () => {
     const history = useHistory();
     const dispatch = useDispatch();
     const url = new URL(window.location.href);
-
+    
     const allHandleSort = () => {
         const name = 'all';
         dispatch(actionFilterBooks(name))
@@ -60,4 +60,4 @@ const SideBar = () => {
 
     )
 }
-export default SideBar;
+export default React.memo(SideBar);

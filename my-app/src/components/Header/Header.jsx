@@ -10,7 +10,6 @@ const Header = (cardData) => {
         setPopup(!popup)
     }
     const totalPriceBook = totalPrice.reduce((total, book) => total + book.price, 0);
- 
     return (
         <nav className="navbar">
             <div className="navbar__content">

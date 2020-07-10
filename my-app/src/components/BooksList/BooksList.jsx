@@ -13,6 +13,7 @@ import { orderBy } from 'lodash';
 const BooksList = ({ booksData }) => {
     const [books, setBooks] = useState([]);
     const filterBooks = useSelector((state) => state.books.filter);
+
     const sortBy = (booksData) => {
         switch (filterBooks) {
             case 'all':
