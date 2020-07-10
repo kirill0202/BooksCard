@@ -1,18 +1,27 @@
-import React from 'react';
+import React, { useState } from 'react';
+import Popup from '../Popup/Popup';
 import "./Header.scss";
 
 
-const Header = () => {
+const Header = (cardData) => {
+    const { totalPrice, countBooks } = cardData;
+    const [popup, setPopup] = useState(false);
+    const handlePopup = () => {
+        setPopup(!popup)
+    }
+    const totalPriceBook = totalPrice.reduce((total, book) => total + book.price, 0);
+ 
     return (
-        <header className="header">
-            <div className="header__content">
-               <p className="header___content-title">Lists Books</p>
+        <nav className="navbar">
+            <div className="navbar__content">
+                <h3 className="navbar__content-title">Books Lists</h3>
             </div>
-            <div className="header__content-left">
-                <p className="header__content-left-result">Итого: <span className="header__content-price">0 руб.</span></p>
-                <p className="header__content-left-cart">Корзина:  <span className="header__content-card">(0)</span></p>
-            </div>
-        </header>
+            <ul className="navbar__items">
+                <li className="navbar__item">Цена ({totalPriceBook}) руб.</li>
+                <li className="navbar__item" onClick={handlePopup}>Корзина ({countBooks})</li>
+            </ul>
+            {popup && <Popup totalPrice={totalPrice}/>}
+        </nav>
     )
 }
 export default React.memo(Header);

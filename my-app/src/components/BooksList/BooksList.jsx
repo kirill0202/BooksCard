@@ -29,6 +29,7 @@ const BooksList = ({ booksData }) => {
     }
     const finishSortBooksData = sortBy(booksData);
     const dispatch = useDispatch();
+
     dispatch(actionSetBook(books))
     useEffect(() => {
         const booksData = async () => {
@@ -39,11 +40,9 @@ const BooksList = ({ booksData }) => {
     }, [])
 
     const elementsBooks = finishSortBooksData.map(book => {
-        return (
-            <li key={book.id}>
-                <BooksListElements {...book} />
-            </li>
-        )
+        return (<li key={book.id}>
+                <BooksListElements {...book}/>
+            </li>)
     })
     return (
         <>
