@@ -1,26 +1,28 @@
+@import '../../style/const.scss';
+
 .sidebar {
-    border: 1px solid #ddd;
-    max-height: 300px;
+    border: 1px solid $color__default;
+    align-self: flex-start;
+    min-height: auto;
     min-width: 250px;
     &__item {
         padding: 10px;
-        border-bottom: 1px solid #ddd;
+        border-bottom: 1px solid $color__default;
         cursor: pointer;
         font-weight: bold;
         &:hover {
-            background-color: #ddd;
+            background-color: $color__default;
         }
     }
     &__search {
         padding: 10px;
-        border: 1px solid #ddd;
+        border: 1px solid $color__default;
         width: 200px;
     }
-    &__input{
-       min-height: 30%; 
-       display: flex;
-       justify-content: center; 
-       align-items: center;   
+    &__input {
+        margin: 15px;
+        display: flex;
+        justify-content: center;
+        align-content: center;
     }
 }
-

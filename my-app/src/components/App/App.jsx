@@ -1,25 +1,18 @@
 import React from 'react';
 import './App.scss';
-import Menu from '../Header/Header';
-
 import SideBar from '../SideBar/SideBar';
 import BookListContainer from '../../containers/BooksListContainers/BookListContainer';
-
-
-
-
-
+import HeaderContainer from '../../containers/HeaderContainers/HeaderContainer';
 
 const App = () => {
   return (
     <div className="App">
-      <Menu />
+      <HeaderContainer/>
       <div className="container components">
         <BookListContainer />
         <SideBar />
       </div>
-
     </div>
   );
 }
-export default App;
+export default React.memo(App);
