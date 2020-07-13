@@ -13,7 +13,7 @@ const Header = (cardData) => {
     return (
         <nav className="navbar">
             <div className="navbar__content">
-                <h3 className="navbar__content-title">Books Lists</h3>
+                <h3 className="navbar__content-title">Books List</h3>
             </div>
             <ul className="navbar__items">
                 <li className="navbar__item">Цена ({totalPriceBook}) руб.</li>
