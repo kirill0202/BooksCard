@@ -1,8 +1,5 @@
 @import '../../style/mixin.scss';
-.loading{
-    @include flex;
-    justify-content: center;
-}
+
 .books__list-items{
     @include flex;
     flex-wrap: wrap;

@@ -1,21 +1,23 @@
-@import '../../style/const.scss';
-@import '../../style/mixin.scss';
+@import "../../style/const.scss";
+@import "../../style/mixin.scss";
 
-.header{
+.navbar { 
     @include flex;
     justify-content: space-between;
-    border: 2px solid $color__header-border;
-    padding: 10px;
+    align-items: center;
+    border: 2px solid $color__default;
     border-radius: 10px;
     margin: 5px;
-    &__content-left{
+    &__content{
+        padding-left: 10px;
+    }
+    &__items {
         @include flex;
-        margin-right: 15px;
-    }
-    &__content-left-result{
-        margin-right: 15px;
-    }
-    &___content-title{
         font-weight: bold;
+        cursor: pointer;
+    }
+    &__item{
+        border-left:1px solid $color__default;
+        padding: 10px;
     }
 }

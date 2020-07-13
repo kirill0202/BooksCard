@@ -1,0 +1,29 @@
+@import '../../../style/const.scss';
+
+.popup{
+    padding: 10px;
+    &__content{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        &-item{
+            display: flex;
+            align-items: center;
+        }
+        &-button{
+            cursor: pointer;
+            border: none;
+            padding: 5px 15px;
+            color: $color__default-white;
+            background-color: $color__button-cart-remove;
+        }
+        &-title{
+            word-break: break-all;
+            padding-left: 10px;
+        }
+        &-image{
+            max-width: 50px;
+            max-height: 50px;
+        }
+    }
+}
