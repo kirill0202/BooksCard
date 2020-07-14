@@ -1,0 +1,15 @@
+@import '../../style/mixin.scss';
+.login{
+    @include form__style-default;
+    &__wrapper{
+        background-color: #fff;
+        border-radius: 5px;
+        padding: 10px;
+    }
+    &__content-title{
+        text-align: center;
+    }
+    &__form-register{
+        @include form__link-style;
+    }
+}

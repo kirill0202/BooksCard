@@ -1,17 +1,12 @@
 import React from 'react';
 import './App.scss';
-import SideBar from '../SideBar/SideBar';
-import BookListContainer from '../../containers/BooksListContainers/BookListContainer';
-import HeaderContainer from '../../containers/HeaderContainers/HeaderContainer';
+import useRoutes from '../../pages/routes';
 
 const App = () => {
+  const routes = useRoutes(false)
   return (
     <div className="App">
-      <HeaderContainer/>
-      <div className="container components">
-        <BookListContainer />
-        <SideBar />
-      </div>
+      {routes}
     </div>
   );
 }

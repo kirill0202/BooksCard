@@ -1,0 +1,17 @@
+@import "../../../style/mixin.scss";
+
+.form {
+    margin: 10px;
+    &__input {
+      @include input_register;
+    }
+    &__sumbit-buttom {
+        width: 100%;
+        padding: 10px;
+        cursor: pointer;
+        background: #3498db;
+        border: none;
+        color: #fff;
+        font-size: 15px;
+    }
+}

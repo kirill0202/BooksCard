@@ -1,3 +1,28 @@
 @mixin flex {
     display: flex;
 }
+@mixin input_register {
+    height: 30px;
+    width: 300px;
+    margin: 10px 0;
+    padding-left: 10px;
+}
+@mixin form__style-default {
+    height: 100vh;
+    background-color: #3498db;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin form__link-style {
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    background-color: #ddd;
+    padding: 5px;
+    border-radius: 30px;
+    color: #fff;
+    &:hover {
+        color: #3498db;
+    }
+}
