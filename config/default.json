@@ -1,0 +1,5 @@
+{
+   "port": 5000,
+   "mongoUrl":  "mongodb+srv://Mylnikov:skufall0202@cluster0.nyov2.azure.mongodb.net/app?retryWrites=true&w=majority",
+   "jwtSecret": "kirill mylnikov book list"
+}

@@ -1,0 +1,39 @@
+{
+  "name": "bookscard",
+  "version": "1.0.0",
+  "description": "Books List ",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "server": "nodemon app.js",
+    "my-app": "npm run start --prefix my-app",
+    "dev": "concurrently \"npm run server\"  \"npm run my-app\" "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kirill0202/BooksCard.git"
+  },
+  "keywords": [
+    "Books",
+    "React"
+  ],
+  "author": "Mylnikov Kirill <mylnikovkirill103@outlook.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kirill0202/BooksCard/issues"
+  },
+  "homepage": "https://github.com/kirill0202/BooksCard#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "config": "^3.3.1",
+    "express": "^4.17.1",
+    "express-validator": "^6.6.0",
+    "jsontokens": "^3.0.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.9.23"
+  },
+  "devDependencies": {
+    "concurrently": "^5.2.0",
+    "nodemon": "^2.0.4"
+  }
+}
