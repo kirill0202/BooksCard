@@ -3,14 +3,14 @@ import './AuthUserRegisterForm.scss';
 import { Field, reduxForm } from 'redux-form';
 import Input from '../../../Input/Input';
 import Button from '../../../Button/Button';
-import { required } from '../../../../utils/validate';
+import { required, LengthCreator } from '../../../../utils/validate';
 
 
 
-
+const minLingthPasswod = LengthCreator(6);
 
 const AuthUserRegisterForm = ({ handleSubmit, disabled }) => {
-  
+   
     return (
         <form onSubmit={handleSubmit}>
             <div className="form__register-input">
@@ -29,7 +29,7 @@ const AuthUserRegisterForm = ({ handleSubmit, disabled }) => {
                classnamestyle="form__password form__input"
                name="password__register"
                type="password"
-               validate={[required]}
+               validate={[required, minLingthPasswod]}
                />
             </div>
             <Button title={'Регистрация'} classnamestyle="form__sumbit-register" disabled={disabled}/>

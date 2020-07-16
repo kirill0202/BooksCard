@@ -3,12 +3,14 @@ import { Field, reduxForm } from "redux-form";
 import Input from '../../Input/Input';
 import Button from '../../Button/Button';
 import './AuthUserForm.scss';
-import { required } from '../../../utils/validate';
+import { required, LengthCreator } from '../../../utils/validate';
 
 
 
-const AuthUserForm = ({ handleSubmit }) => {
-    
+const minLengthPassword = LengthCreator(6);
+
+const AuthUserForm = ({ handleSubmit, disabled}) => {
+ 
     return (
         <form onSubmit={handleSubmit} className="form">
             <div className="form__input-login">
@@ -18,7 +20,7 @@ const AuthUserForm = ({ handleSubmit }) => {
                     type="text"
                     name="login_form"
                     classnamestyle="form__login form__input"
-                    validate={[required]}
+                    validate={[required,]}
                 />
             </div>
             <div className="form__input-login">
@@ -28,10 +30,10 @@ const AuthUserForm = ({ handleSubmit }) => {
                     type="password"
                     name="passwod_form"
                     classnamestyle="form__password form__input"
-                    validate={[required]}
+                    validate={[required, minLengthPassword]}
                 />
             </div>
-            <Button title={'Войти'} classnamestyle="form__sumbit-login"/>
+            <Button title={'Войти'} classnamestyle="form__sumbit-login" disabled={disabled}/>
         </form>
     )
 }

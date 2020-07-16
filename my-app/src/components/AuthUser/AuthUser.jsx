@@ -1,16 +1,19 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import './AuthUser.scss';
 import { Link } from 'react-router-dom';
 import AuthUserContainerForm from './AuthUserForm/AuthUserForm';
 import { useHttp } from '../../hooks/http.hook';
 import { AuthContext } from '../../context/AuthContext';
+import Alert from '../Alert/Alert';
+import useMessage from '../../hooks/message.hook';
+
 
 
 
 const AuthUser = () => {
-     const {loading, error, request}= useHttp();
-     const auth = useContext(AuthContext)
- 
+    const {loading, error, request}= useHttp();
+    const auth = useContext(AuthContext)
+    const messageToast = useMessage;
     const handlerAuthUserForm = async (values) => {
         const authUserFormValue = {
             email: values.login_form,
@@ -19,11 +22,9 @@ const AuthUser = () => {
         try{
             const data = await request('/api/auth/login', 'POST', {...authUserFormValue})
             auth.login(data.token, data.userId)
-          }catch(e){
-    
-          }
+          }catch(e){ }
     }
-
+    console.log(error)
     return (
             <div className="login">
               <div className="login__wrapper">
@@ -33,7 +34,7 @@ const AuthUser = () => {
                         </h1> 
                     </div>
                    <div className="login__form">
-                        <AuthUserContainerForm onSubmit={handlerAuthUserForm} />
+                        <AuthUserContainerForm onSubmit={handlerAuthUserForm} disabled={loading} error={error}/>
                     </div>
                     <div className="login__footer">
                         <Link to={'/Register'} className="login__form-register">

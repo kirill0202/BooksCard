@@ -24,5 +24,6 @@ export const useHttp = () => {
             throw e
         }
     }, [])
-    return { loading, request, error }
+    const clearError = useCallback(()=> setError(null), [])
+    return { loading, request, error, clearError }
 }

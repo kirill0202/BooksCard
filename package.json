@@ -30,6 +30,7 @@
     "express-validator": "^6.6.0",
     "jsontokens": "^3.0.0",
     "jsonwebtoken": "^8.5.1",
+    "materialize-css": "^1.0.0-rc.2",
     "mongoose": "^5.9.23"
   },
   "devDependencies": {

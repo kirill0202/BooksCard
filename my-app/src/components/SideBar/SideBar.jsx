@@ -51,9 +51,11 @@ const SideBar = () => {
                 </li>
             </ul>
             <div className="sidebar__input">
-                <Input placeholder={'search books'}
+                <Input 
+                    placeholder={'search books'}
                     classnamestyle={'sidebar__search'}
                     value={valueInput}
+                    meta
                     onChange={handleInputValue} />
             </div>
         </div>
