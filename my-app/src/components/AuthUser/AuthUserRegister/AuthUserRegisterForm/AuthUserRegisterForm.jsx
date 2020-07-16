@@ -3,9 +3,14 @@ import './AuthUserRegisterForm.scss';
 import { Field, reduxForm } from 'redux-form';
 import Input from '../../../Input/Input';
 import Button from '../../../Button/Button';
+import { required } from '../../../../utils/validate';
 
 
-const AuthUserRegisterForm = ({ handleSubmit }) => {
+
+
+
+const AuthUserRegisterForm = ({ handleSubmit, disabled }) => {
+  
     return (
         <form onSubmit={handleSubmit}>
             <div className="form__register-input">
@@ -14,6 +19,7 @@ const AuthUserRegisterForm = ({ handleSubmit }) => {
                placeholder={'Введите email'}
                classnamestyle='form__register form__input'
                name="email__register"
+               validate={[required]}
               />
             </div>
             <div className="form__register-input">
@@ -21,10 +27,12 @@ const AuthUserRegisterForm = ({ handleSubmit }) => {
                component={Input}
                placeholder='Введите password'
                classnamestyle="form__password form__input"
-               name="passwoed__register"
+               name="password__register"
+               type="password"
+               validate={[required]}
                />
             </div>
-            <Button title={'Регистрация'} classnamestyle="form__sumbit-buttom"/>
+            <Button title={'Регистрация'} classnamestyle="form__sumbit-register" disabled={disabled}/>
         </form>
     )
 }

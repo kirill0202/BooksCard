@@ -26,3 +26,24 @@
         color: #3498db;
     }
 }
+@mixin form__button-sumbit {
+    width: 100%;
+    padding: 10px;
+    cursor: pointer;
+    background: #3498db;
+    border: none;
+    color: #fff;
+    font-size: 15px;
+}
+@mixin wrapper__register-form{
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 10px;
+}
+@mixin background__register-form{
+    height: 100vh;
+    background-color: #3498DB;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

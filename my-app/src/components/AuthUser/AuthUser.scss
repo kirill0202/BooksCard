@@ -2,9 +2,7 @@
 .login{
     @include form__style-default;
     &__wrapper{
-        background-color: #fff;
-        border-radius: 5px;
-        padding: 10px;
+       @include  wrapper__register-form;
     }
     &__content-title{
         text-align: center;

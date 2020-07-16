@@ -1,14 +1,8 @@
 @import '../../../style/mixin.scss';
 .register{
-    height: 100vh;
-    background-color: #3498DB;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include background__register-form;
     &__wrapper{
-        background-color: #fff;
-        border-radius: 5px;
-        padding: 10px;
+        @include wrapper__register-form;
     }
     &__content-title{
         text-align: center;
