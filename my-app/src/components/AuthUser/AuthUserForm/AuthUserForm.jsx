@@ -33,7 +33,7 @@ const AuthUserForm = ({ handleSubmit, disabled}) => {
                     validate={[required, minLengthPassword]}
                 />
             </div>
-            <Button title={'Войти'} classnamestyle="form__sumbit-login" disabled={disabled}/>
+            <Button title={disabled ?  'Вход...' : 'Войти'} classnamestyle="form__sumbit-login" disabled={disabled}/>
         </form>
     )
 }
@@ -41,4 +41,4 @@ const AuthUserContainerForm = reduxForm({
     form: "AuthUserForm",
 })(AuthUserForm);
 
-export default AuthUserContainerForm;
+export default React.memo(AuthUserContainerForm);

@@ -4,16 +4,16 @@ import { Link } from 'react-router-dom';
 import AuthUserContainerForm from './AuthUserForm/AuthUserForm';
 import { useHttp } from '../../hooks/http.hook';
 import { AuthContext } from '../../context/AuthContext';
-import Alert from '../Alert/Alert';
 import useMessage from '../../hooks/message.hook';
 
 
 
 
 const AuthUser = () => {
-    const {loading, error, request}= useHttp();
+    const {loading, error, request, clearError}= useHttp();
+    
     const auth = useContext(AuthContext)
-    const messageToast = useMessage;
+    const messageToast = useMessage();
     const handlerAuthUserForm = async (values) => {
         const authUserFormValue = {
             email: values.login_form,
@@ -24,7 +24,12 @@ const AuthUser = () => {
             auth.login(data.token, data.userId)
           }catch(e){ }
     }
-    console.log(error)
+    useEffect(()=>{
+     setTimeout(() => {
+        clearError();
+     }, 8000);
+    }, [error, clearError])
+    
     return (
             <div className="login">
               <div className="login__wrapper">
@@ -41,8 +46,9 @@ const AuthUser = () => {
                             Зарегистрироваться?
                         </Link>
                     </div>
+                    {messageToast(error)}
                 </div> 
             </div>
     )
 }
-export default AuthUser;
+export default React.memo(AuthUser);

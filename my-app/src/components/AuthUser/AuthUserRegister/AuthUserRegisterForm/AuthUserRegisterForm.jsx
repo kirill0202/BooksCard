@@ -7,7 +7,7 @@ import { required, LengthCreator } from '../../../../utils/validate';
 
 
 
-const minLingthPasswod = LengthCreator(6);
+const minLengthPasswod = LengthCreator(6);
 
 const AuthUserRegisterForm = ({ handleSubmit, disabled }) => {
    
@@ -29,10 +29,10 @@ const AuthUserRegisterForm = ({ handleSubmit, disabled }) => {
                classnamestyle="form__password form__input"
                name="password__register"
                type="password"
-               validate={[required, minLingthPasswod]}
+               validate={[required, minLengthPasswod]}
                />
             </div>
-            <Button title={'Регистрация'} classnamestyle="form__sumbit-register" disabled={disabled}/>
+            <Button title={disabled ? 'Подождите пожалуйста...' : 'Регистрация'} classnamestyle="form__sumbit-register" disabled={disabled}/>
         </form>
     )
 }
@@ -41,4 +41,4 @@ const AuthUserRegisterContainerForm = reduxForm({
 })(AuthUserRegisterForm);
 
 
-export default AuthUserRegisterContainerForm;
+export default React.memo(AuthUserRegisterContainerForm);

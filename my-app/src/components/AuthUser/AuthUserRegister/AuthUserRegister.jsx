@@ -21,7 +21,7 @@ const AuthUserRegister = () => {
   setTimeout(() => {
     clearError()
   }, 8000);
- }, [clearError])
+ }, [error, messageToast, clearError])
   return (
     <div className="register">
       <div className="register__wrapper">

@@ -4,16 +4,14 @@ import './Alert.scss';
 
 
 const Alert = ({ text }) => {
-   
     return (
         <>
             {text ? <div className="toast toast__error">
-                <div className="Toast__message">
-                    <div className="Toast__message-category"></div>
+                <div className="toast__message">
                     {text}
                 </div>
             </div> : text}
         </>
     )
 }
-export default Alert;
+export default React.memo(Alert);
