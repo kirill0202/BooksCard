@@ -1,0 +1,11 @@
+@import "../../../style/mixin.scss";
+
+.form {
+    &__input {
+      @include input_register;
+    }
+    &__sumbit-login {
+        @include form__button-sumbit;
+        margin: 5px 0 10px 0;
+    }
+}

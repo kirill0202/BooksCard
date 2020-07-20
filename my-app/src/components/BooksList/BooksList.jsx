@@ -4,13 +4,13 @@ import { actionSetBook } from '../../store/actions/actionBooks/actionSetBook';
 import { useSelector, useDispatch } from 'react-redux';
 import BooksListElements from './BooksListElement/BooksListElement';
 import Loading from '../Loading/Loading';
-import './BookList.scss';
 import { orderBy } from 'lodash';
-
+import './BookList.scss';
 
 
 
 const BooksList = ({ booksData }) => {
+    
     const [books, setBooks] = useState([]);
     const filterBooks = useSelector((state) => state.books.filter);
 

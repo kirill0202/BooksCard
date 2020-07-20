@@ -15,7 +15,7 @@ const PopupList = ({ title, id , image }) => {
             <div className="popup__wrapper">
                 <div className="popup__content">
                     <div className="popup__content-item">
-                    <img src={image} className="popup__content-image"/>
+                    <img src={image} className="popup__content-image" alt='book popup'/>
                         <p className="popup__content-title">
                             {title}
                         </p>
@@ -31,4 +31,4 @@ const PopupList = ({ title, id , image }) => {
         </div>
     )
 }
-export default PopupList;
+export default React.memo(PopupList);

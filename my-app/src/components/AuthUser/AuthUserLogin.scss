@@ -1,0 +1,32 @@
+@import '../../style/mixin.scss';
+
+
+.login{
+    @include form__style-default;
+    &__wrapper{
+       @include  wrapper__register-form;
+    }
+    &__content{
+        width: 100%;
+        height: 100%;
+        @include position__absolute-form;
+        @include  display__flex-center;
+    }
+    &__content-title{
+        text-align: center;
+    }
+    &__form-register{
+        @include form__link-style;
+    }
+    &__video{
+        padding-bottom: 56.25%;
+    }
+    &__video-book{
+        @include position__absolute-form;
+        width: 100%;
+        height: auto;
+    }
+}
+.login::before{
+    @include background__dark;
+}

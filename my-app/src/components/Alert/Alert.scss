@@ -1,0 +1,18 @@
+@import '../../style/const.scss';
+
+.toast {
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: $color__default-white;
+    border-left: 1rem solid $color__alert-border;
+    border-radius: 0.5rem;
+    box-shadow: 0.125rem 0.125rem 0.25rem rgba(0, 0, 0, 0.25);
+    font-family: Helvetica;
+    padding: 1rem;
+    margin: 1rem auto;
+    width: 25rem;
+    &__error{
+        border-color: $color__alert-error;  
+    }
+  }
