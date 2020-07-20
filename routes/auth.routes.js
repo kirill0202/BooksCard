@@ -27,7 +27,7 @@ router.post(
             const { email, password } = req.body
             const candindant = await User.findOne({ email })
             if (candindant) {
-                res.status(400).json({ message: 'Такой пользователь уже найден' })
+                res.status(400).json({ message: 'Такой пользователь уже зарегистрирован!' })
             }
             const heshedPassword = await bcrypt.hash(password, 12)
             const user = new User({ email, password: heshedPassword })

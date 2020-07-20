@@ -2,7 +2,7 @@ import React from 'react';
 import { Field, reduxForm } from "redux-form";
 import Input from '../../Input/Input';
 import Button from '../../Button/Button';
-import './AuthUserForm.scss';
+import './AuthUserLoginForm.scss';
 import { required, LengthCreator } from '../../../utils/validate';
 
 
@@ -20,7 +20,7 @@ const AuthUserForm = ({ handleSubmit, disabled}) => {
                     type="text"
                     name="login_form"
                     classnamestyle="form__login form__input"
-                    validate={[required,]}
+                    validate={[required]}
                 />
             </div>
             <div className="form__input-login">

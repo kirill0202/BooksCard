@@ -4,9 +4,10 @@ import useRoutes from '../../pages/routes';
 import { useAuth } from '../../hooks/auth.hook';
 import { AuthContext } from '../../context/AuthContext';
 
+
 const App = () => {
   const { token, login, logout, userId } = useAuth();
-  const isAutheticated = !!token
+  const isAutheticated = !!token;
   const routes = useRoutes(isAutheticated)
   return (
     <AuthContext.Provider value={{

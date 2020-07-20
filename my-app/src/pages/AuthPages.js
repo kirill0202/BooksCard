@@ -1,10 +1,10 @@
 import React from 'react';
-import AuthUser from '../components/AuthUser/AuthUser';
+import AuthUserLogin from '../components/AuthUser/AuthUserLogin';
 
 
 const AuthPages = () => {
     return (
-           <AuthUser/>
+    <AuthUserLogin/> 
     )
 }
 
