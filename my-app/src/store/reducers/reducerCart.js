@@ -8,7 +8,7 @@ const initialState = {
 const reducerCart = (state = initialState, action) => {
     switch (action.type) {
         case  BOOK_ADD_CARD:
-            return {...state, cart: [...state.cart, action.payload]}
+             return {...state, cart: [...state.cart, action.payload]}
         case BOOK_REMOVE_CARD:
              return {...state, cart: state.cart.filter(item => item.id !== action.payload)}
         default:

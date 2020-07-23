@@ -1,10 +1,9 @@
-import  { SET_BOOKS, BOOK_SORT_CARD,  }  from "../type/type";
+import  { SET_BOOKS, BOOK_SORT_CARD  }  from "../type/type";
 
 const initialState = {
     books: [],
     filter: 'all'
 }
-
 const reducerBooks = (state = initialState, action) => {
     switch (action.type) {
         case SET_BOOKS:
