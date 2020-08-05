@@ -18,9 +18,6 @@
     &__form-register{
         @include form__link-style;
     }
-    &__video{
-        padding-bottom: 56.25%;
-    }
     &__video-book{
         @include position__absolute-form;
         width: 100%;

@@ -1,12 +1,11 @@
 import React, { useContext, useEffect } from 'react';
-import './AuthUserLogin.scss';
 import { Link } from 'react-router-dom';
-import AuthUserContainerForm from './AuthUserLoginForm/AuthUserLoginForm';
 import { useHttp } from '../../hooks/http.hook';
 import { AuthContext } from '../../context/AuthContext';
 import useMessage from '../../hooks/message.hook';
-import videoBooks from '../../video/Book.mp4';
-
+import LoginFormContainer  from './LoginForm/LoginForm'
+import Video from '../Video/Video';
+import './Login.scss';
 
 
 
@@ -34,9 +33,7 @@ const AuthUserLogin = () => {
     return (
         <div className="login">
             <div className="login__video">
-                <video autoPlay loop muted className="login__video-book">
-                    <source src={videoBooks} />
-                </video>
+                <Video/>
             </div>
             <div className="login__content">
                  <div className="login__wrapper">
@@ -44,7 +41,7 @@ const AuthUserLogin = () => {
                             Авторизация
                         </h1>
                         <div className="login__form">
-                            <AuthUserContainerForm onSubmit={handlerAuthUserForm} disabled={loading} error={error} />
+                            <LoginFormContainer onSubmit={handlerAuthUserForm} disabled={loading} error={error} />
                         </div>
                         <div className="login__footer">
                             <Link to={'/Register'} className="login__form-register">

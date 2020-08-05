@@ -2,14 +2,15 @@ import React from 'react';
 import { Field, reduxForm } from "redux-form";
 import Input from '../../Input/Input';
 import Button from '../../Button/Button';
-import './AuthUserLoginForm.scss';
 import { required, LengthCreator } from '../../../utils/validate';
+import './LoginForm.scss';
+
 
 
 
 const minLengthPassword = LengthCreator(6);
 
-const AuthUserForm = ({ handleSubmit, disabled}) => {
+const LoginForm = ({ handleSubmit, disabled}) => {
  
     return (
         <form onSubmit={handleSubmit} className="form">
@@ -37,8 +38,8 @@ const AuthUserForm = ({ handleSubmit, disabled}) => {
         </form>
     )
 }
-const AuthUserContainerForm = reduxForm({
-    form: "AuthUserForm",
-})(AuthUserForm);
+const LoginFormContainer = reduxForm({
+    form: "LoginForm",
+})(LoginForm);
 
-export default React.memo(AuthUserContainerForm);
+export default React.memo(LoginFormContainer);

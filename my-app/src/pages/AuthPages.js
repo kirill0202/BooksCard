@@ -1,10 +1,10 @@
 import React from 'react';
-import AuthUserLogin from '../components/AuthUser/AuthUserLogin';
+import Login from '../components/Login/Login';
 
 
 const AuthPages = () => {
     return (
-    <AuthUserLogin/> 
+    <Login/> 
     )
 }
 

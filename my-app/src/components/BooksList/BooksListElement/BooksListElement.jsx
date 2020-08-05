@@ -16,7 +16,7 @@ const BooksListElements = (book) => {
             <div className="card__wrapper">
                 <div className="card__content">
                     <div className="card__content-image">
-                        <img src={image} alt="book image" className="card__content-image" />
+                        <img src={image} alt="book" className="card__content-image" />
                     </div>
                     <div className="footer__card">
                         <p className="footer__card-title">{title}</p>
