@@ -3,7 +3,7 @@ import { Switch, Route, Redirect } from 'react-router';
 import HomePages from './HomePage';
 import Registration from '../components/Registration/Registration';
 import Login from '../components/Login/Login';
-import { login, home } from '../path/path';
+import { home, registration, login } from '../path/path';
 
 export const useRoutes = isAuthenticated => {
     if (isAuthenticated) {
@@ -21,7 +21,7 @@ export const useRoutes = isAuthenticated => {
             <Route path={login} exact>
                 <Login/>
             </Route>
-            <Route path="/" exact>
+            <Route path={registration} exact>
                <Registration/>
             </Route>
             <Redirect to={login} />

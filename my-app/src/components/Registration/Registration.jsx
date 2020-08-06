@@ -13,7 +13,7 @@ const Registration = () => {
   const registerHandler = async (values) => {
     const dataForm = {
       email: values.email__register,
-      password: values.password__register
+      password: values.password
     }
     try {
       await request('/api/auth/register', 'POST', { ...dataForm })

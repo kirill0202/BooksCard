@@ -2,7 +2,7 @@ import React from 'react';
 import { Field, reduxForm } from 'redux-form';
 import Input from '../../Input/Input';
 import Button from '../../Button/Button';
-import { required, LengthCreator } from '../../../utils/validate';
+import { required, LengthCreator, isMatchPassword} from '../../../utils/validate';
 import './RegistrationForm.scss';
 
 
@@ -24,11 +24,21 @@ const RegistrationForm = ({ handleSubmit, disabled }) => {
             <div className="form__register-input">
                <Field
                component={Input}
-               placeholder='Введите password'
+               placeholder='Введите пароль'
                classnamestyle="form__password form__input"
-               name="password__register"
+               name="password"
                type="password"
-               validate={[required, minLengthPasswod]}
+               validate={[required, minLengthPasswod, isMatchPassword]}
+               />
+            </div>
+            <div className="form__register-input">
+               <Field
+               component={Input}
+               placeholder='Введите еще пароль'
+               classnamestyle="form__password form__input"
+               name="password__repeat"
+               type="password"
+               validate={[required, minLengthPasswod, isMatchPassword]}
                />
             </div>
             <Button title={disabled ? 'Подождите пожалуйста...' : 'Регистрация'} classnamestyle="form__sumbit-register" disabled={disabled}/>
