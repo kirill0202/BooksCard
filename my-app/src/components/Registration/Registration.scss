@@ -1,7 +1,7 @@
-@import '../../../style/mixin.scss';
+@import '../../style/mixin.scss';
 
 
-.register{
+.registration{
     @include form__style-default;
     &__wrapper{
         @include wrapper__register-form;
@@ -18,9 +18,6 @@
         height: 100%;
         @include position__absolute-form;
         @include  display__flex-center;
-    }
-    &__video{
-        padding-bottom: 56.25%;
     }
     &__video-book{
         @include position__absolute-form;

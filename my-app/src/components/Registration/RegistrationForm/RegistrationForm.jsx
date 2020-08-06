@@ -1,15 +1,14 @@
 import React from 'react';
-import './AuthUserRegisterForm.scss';
 import { Field, reduxForm } from 'redux-form';
-import Input from '../../../Input/Input';
-import Button from '../../../Button/Button';
-import { required, LengthCreator } from '../../../../utils/validate';
-
+import Input from '../../Input/Input';
+import Button from '../../Button/Button';
+import { required, LengthCreator } from '../../../utils/validate';
+import './RegistrationForm.scss';
 
 
 const minLengthPasswod = LengthCreator(6);
 
-const AuthUserRegisterForm = ({ handleSubmit, disabled }) => {
+const RegistrationForm = ({ handleSubmit, disabled }) => {
    
     return (
         <form onSubmit={handleSubmit}>
@@ -36,9 +35,9 @@ const AuthUserRegisterForm = ({ handleSubmit, disabled }) => {
         </form>
     )
 }
-const AuthUserRegisterContainerForm = reduxForm({
-    form: 'AuthUserRegisterForm'
-})(AuthUserRegisterForm);
+const RegistrationFormContainer = reduxForm({
+    form: 'RegistrationForm'
+})(RegistrationForm);
 
 
-export default React.memo(AuthUserRegisterContainerForm);
+export default React.memo(RegistrationFormContainer);

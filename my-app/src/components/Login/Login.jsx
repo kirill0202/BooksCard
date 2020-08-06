@@ -5,7 +5,10 @@ import { AuthContext } from '../../context/AuthContext';
 import useMessage from '../../hooks/message.hook';
 import LoginFormContainer  from './LoginForm/LoginForm'
 import Video from '../Video/Video';
+import {registration} from '../../path/path';
+
 import './Login.scss';
+
 
 
 
@@ -44,7 +47,7 @@ const AuthUserLogin = () => {
                             <LoginFormContainer onSubmit={handlerAuthUserForm} disabled={loading} error={error} />
                         </div>
                         <div className="login__footer">
-                            <Link to={'/Register'} className="login__form-register">
+                            <Link to={registration} className="login__form-register">
                                 Зарегистрироваться?
                         </Link>
                         </div>

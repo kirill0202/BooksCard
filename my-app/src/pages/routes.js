@@ -1,29 +1,30 @@
 import React from 'react';
 import { Switch, Route, Redirect } from 'react-router';
 import HomePages from './HomePage';
-import AuthPages from './AuthPages';
-import AuthUserRegister from '../components/AuthUser/AuthUserRegister/AuthUserRegister';
+import Registration from '../components/Registration/Registration';
+import Login from '../components/Login/Login';
+import { login, home } from '../path/path';
 
 export const useRoutes = isAuthenticated => {
     if (isAuthenticated) {
         return (
             <Switch>
-                <Route path="/Home" exact>
+                <Route path={home} exact>
                     <HomePages />
                 </Route>
-                <Redirect to={"/Home"} />
+                <Redirect to={home} />
             </Switch>
         )
     }
     return (
         <Switch>
-            <Route path="/Login" exact>
-                <AuthPages />
+            <Route path={login} exact>
+                <Login/>
             </Route>
-            <Route path="/Register" exact>
-               <AuthUserRegister/>
+            <Route path="/" exact>
+               <Registration/>
             </Route>
-            <Redirect to={"/Login"} />
+            <Redirect to={login} />
         </Switch>
     )
 }
